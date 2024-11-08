@@ -2,6 +2,7 @@ package be.pxl.ja.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class PredicateExample {
@@ -24,10 +25,6 @@ public class PredicateExample {
     }
     
     public static void printElements(List<String> list, Predicate<String> predicate) {
-        for (String item : list) {
-            if (predicate.test(item)) {
-                System.out.println(item);
-            }
-        }
+        list.stream().filter(predicate).forEach(System.out::println);
     }
 }

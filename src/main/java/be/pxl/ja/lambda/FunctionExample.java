@@ -5,7 +5,7 @@ import java.util.function.Function;
 public class FunctionExample {
     public static void main(String[] args) {
         // Define a Function that converts a String to its length (an Integer)
-        Function<String, Integer> stringLengthFunction = (str) -> str.length();
+        Function<String, Integer> stringLengthFunction = String::length;
 
         // Apply the function to a String
         String inputString = "Hello, Function!";
